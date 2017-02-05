@@ -1,4 +1,4 @@
 # test-bikes
 
-npm install
-npm start
+- npm install
+- npm start
