@@ -36,6 +36,8 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    this.props.uiActions.updateUi({'order': localStorage.getItem('order') || ''});
+    this.props.uiActions.updateUi({'listType': localStorage.getItem('listType') || 'list'});
     this.props.bikesActions.getBikes();
   }
   render() {

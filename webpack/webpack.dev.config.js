@@ -37,11 +37,10 @@ const config = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?(\?[0-9]*)?$/, loader: 'url-loader?limit=10000&minetype=application/font-woff' },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?(\?[0-9]*)?$/, loader: 'file-loader' },
+      { test: /\.(woff2|woff|ttf|eot|svg|otf)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,  loaders: ['url-loader?limit=100&name=fonts/[name]_[hash].[ext]'],
+      },
       { test: /\.(html)(\?v=[0-9]\.[0-9]\.[0-9])?(\?[0-9]*)?$/, loader: 'html-loader' },
       { test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=10000' },
-      {  test: /\.csv$/, loader: 'raw-loader' },
     ],
   },
   postcss: [ autoprefixer ],
@@ -53,7 +52,7 @@ const config = {
       inject: false,
       minify: false,
       appMountId: 'root',
-      title: 'Test Summary',
+      title: 'Test',
     }),
     new webpack.DefinePlugin({
       'process.env': {

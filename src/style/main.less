@@ -1,11 +1,16 @@
+
 @import "../../node_modules/bootstrap/less/bootstrap.less";
+@import "./glyphicons.less";
 
 body {
-  background-color: antiquewhite;
+  background-color: whitesmoke;
 }
 
 .workspace{
   margin: 20px 0;
+  img{
+    width: 100%;
+  }
   table{
     tbody{
       tr{
@@ -16,6 +21,17 @@ body {
           width: 200px;
         }
       }
+    }
+  }
+  .grid-cell{
+    border: 1px solid #b7ac9e;
+    border-radius: 3px;
+    padding: 10px 30px;
+    background-color: antiquewhite;
+    margin: 10px;
+    box-sizing: border-box;
+    h2{
+      margin-top: 5px;
     }
   }
 }

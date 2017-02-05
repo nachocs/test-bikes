@@ -13,6 +13,8 @@ import {
 function getInitialState() {
   return {
     loading: false,
+    listType: 'list',
+    order:'',
   };
 }
 
